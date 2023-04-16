@@ -51,7 +51,7 @@ class Application:
         print("Loaded model from disk")
 
         self.root = tk.Tk()
-        self.root.title("Sign Language To Text Conversion")
+        self.root.title("Sign Language Interpreter")
         self.root.protocol('WM_DELETE_WINDOW', self.destructor)
         self.root.geometry("1300x700")
 
@@ -63,7 +63,7 @@ class Application:
 
         self.T = tk.Label(self.root)
         self.T.place(x=60, y=5)
-        self.T.config(text="Sign Language To Text Conversion", font=("Courier", 30, "bold"))
+        self.T.config(text="Sign Language Interpreter", font=("Courier", 30, "bold"))
 
         self.panel3 = tk.Label(self.root)  # Current Symbol
         self.panel3.place(x=280, y=585)
