@@ -10,7 +10,7 @@ capture = cv2.VideoCapture(0)
 hd = HandDetector(maxHands=1)
 hd2 = HandDetector(maxHands=1)
 
-count = len(oss.listdir("D:\SIGN LANGAGE ALL PROJECTS\EXPERIMENTAL\A-Z\A"))
+count = len(oss.listdir("D:\\SIGN LANGAGE ALL PROJECTS\\EXPERIMENTAL\\A-Z\\A"))
 c_dir = 'A'
 
 offset = 15
@@ -81,7 +81,7 @@ while True:
             if ord(c_dir)==ord('Z')+1:
                 c_dir='A'
             flag = False
-            count = len(oss.listdir("D:\\SIGN LANGAGE ALL PROJECTS\\EXPERIMENTAL\\A-Z" + (c_dir) + "\\"))
+            count = len(oss.listdir("D:\\SIGN LANGAGE ALL PROJECTS\\EXPERIMENTAL\\A-Z\\" + (c_dir) + "\\"))
 
 
         if interrupt & 0xFF == ord('a'):
@@ -97,7 +97,7 @@ while True:
             if suv==180:
                 flag=False
             if step%3==0:
-                cv2.imwrite("D:\\SIGN LANGAGE ALL PROJECTS\\EXPERIMENTAL\\A-Z" + (c_dir) + "\\" + str(count) + ".jpg",
+                cv2.imwrite("D:\\SIGN LANGAGE ALL PROJECTS\\EXPERIMENTAL\\A-Z\\" + (c_dir) + "\\" + str(count) + ".jpg",
                             skeleton1)
 
                 count += 1
